@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>动态桌面宠物</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 允许不使用外部资源和CSP策略提高Electron安全性 -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body>
+    <div id="pet-container">
+        <!-- 默认展示 default.gif（请在此目录放置您的目标动图） -->
+        <img id="pet-gif" src="default.gif" alt="Pet Avatar" draggable="false" />
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

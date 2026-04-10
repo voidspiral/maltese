@@ -1,0 +1,35 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 隐藏滚动条导致白边 */
+    background: transparent; /* 背景完全透明 */
+}
+
+#pet-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 允许通过拖拽此处移动窗口 */
+    -webkit-app-region: drag; 
+}
+
+#pet-gif {
+    /* 图片禁止拖动避免被系统识别为直接拖拽文件 */
+    -webkit-user-drag: none;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* 点击区域为 no-drag，否则点击事件可能失效 */
+    -webkit-app-region: no-drag;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+#pet-gif:active {
+    transform: scale(0.95);
+}
